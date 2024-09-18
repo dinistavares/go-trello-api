@@ -14,13 +14,14 @@ import (
 type Member struct {
 	client          *Client
 	ID              string   `json:"id"`
-	Username        string   `json:"username"`
-	FullName        string   `json:"fullName"`
-	Initials        string   `json:"initials"`
-	AvatarHash      string   `json:"avatarHash"`
-	Email           string   `json:"email"`
-	IDBoards        []string `json:"idBoards"`
-	IDOrganizations []string `json:"idOrganizations"`
+	Username        string   `json:"username,omitempty"`
+	FullName        string   `json:"fullName,omitempty"`
+	Initials        string   `json:"initials,omitempty"`
+	AvatarHash      string   `json:"avatarHash,omitempty"`
+	AvatarURL       string   `json:"avatarUrl,omitempty"`
+	Email           string   `json:"email,omitempty"`
+	IDBoards        []string `json:"idBoards,omitempty"`
+	IDOrganizations []string `json:"idOrganizations,omitempty"`
 }
 
 // GetMember takes a member id and Arguments and returns a Member or an error.
